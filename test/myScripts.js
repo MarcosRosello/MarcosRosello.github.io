@@ -1,19 +1,22 @@
-
-function myLoop2(){
-  var start2 = document.getElementById("start2").value;
-  var end2 = document.getElementById("end2").value;
-  var jump= document.getElementById("jump").value;
-
-  console.log(typeof start2);
-  console.log(typeof end2);
-  console.log(typeof jump);
+function divide(){
+  var g1=document.getElementById("g1").value;
+  var g2=document.getElementById("g2").value;
+  var g3=document.getElementById("g3").value;
+  var g4=document.getElementById("g4").value;
   
-  start2 = Number(start2);
-  end2 = Number(end2);
-  jump = Number(jump);
+  g1=Number(g1);
+  g2=Number(g2);
+  g3=Number(g3);
+  g4=Number(g4);
   
-    for(var i=start2; i<=end2; i+=jump){
-    document.write('<p>'+ i);
-    
-  }
+  console.log(g1);
+  console.log(g2);
+  console.log(g3);
+  console.log(g4);
+  
+  var min = Math.min(g1,g2,g3,g4);
+  var ans =(g1+g2+g3+g4-min)/3;
+  var ansceil = Math.ceil(ans);
+  var ansfloor = Math.floor(ans);
+  document.getElementById("ans").innerHTML="Your average grade is " + ansfloor +".You are close to" + ansceil + ".";
 }
